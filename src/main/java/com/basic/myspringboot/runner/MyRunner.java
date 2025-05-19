@@ -33,7 +33,7 @@ public class MyRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-
+        System.out.println("Logger 구현체 => " + logger.getClass().getName());
         logger.debug("${myboot.name} = {}", name);
         logger.debug("${myboot.age} = {}", age);
         logger.debug("${myboot.fullName} = {}",environment.getProperty("myboot.fullName"));
