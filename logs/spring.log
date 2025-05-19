@@ -1,0 +1,35 @@
+2025-05-19T15:59:05.966+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] c.b.m.MySpringBootAppApplication         : Starting MySpringBootAppApplication using Java 17.0.2 with PID 8644 (C:\mybackend\MySpringBootApp\target\classes started by user in C:\mybackend\MySpringBootApp)
+2025-05-19T15:59:05.970+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] c.b.m.MySpringBootAppApplication         : The following 1 profile is active: "test"
+2025-05-19T15:59:06.023+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-19T15:59:06.023+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-19T15:59:06.996+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-19T15:59:07.016+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2025-05-19T15:59:08.063+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-19T15:59:08.082+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-19T15:59:08.083+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19T15:59:08.124+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-19T15:59:08.125+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2101 ms
+2025-05-19T15:59:08.677+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-19T15:59:08.888+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:200c1606-eaa7-4715-9fdc-d1d459880efb user=SA
+2025-05-19T15:59:08.892+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-19T15:59:09.064+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-19T15:59:09.146+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-19T15:59:09.184+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-19T15:59:09.344+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-19T15:59:09.404+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-19T15:59:09.617+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-19T15:59:09.621+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-19T15:59:09.756+09:00  WARN 8644 --- [MySpringBootApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-19T15:59:10.397+09:00  WARN 8644 --- [MySpringBootApp] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-19T15:59:11.031+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:200c1606-eaa7-4715-9fdc-d1d459880efb'
+2025-05-19T15:59:11.101+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-19T15:59:11.115+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-19T15:59:11.256+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-19T15:59:11.270+09:00  INFO 8644 --- [MySpringBootApp] [restartedMain] c.b.m.MySpringBootAppApplication         : Started MySpringBootAppApplication in 5.679 seconds (process running for 5.979)
