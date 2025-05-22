@@ -82,7 +82,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<scope>test</scope> <!-- test 폴더에만 적용된다. -->
 		</dependency>
 		<!-- Configuration Processor -->
 		<dependency>
@@ -143,7 +143,7 @@
 						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
-<!--							<version>${lombok.version}</version>-->
+					<!--	<version>${lombok.version}</version>-->
 						</exclude>
 					</excludes>
 				</configuration>
