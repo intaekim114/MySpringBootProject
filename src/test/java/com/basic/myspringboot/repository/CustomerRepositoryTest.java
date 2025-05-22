@@ -23,13 +23,16 @@ class CustomerRepositoryTest {
     CustomerRepository customerRepository;
 
     @Test
+    @Rollback(value = false)
     void testUpdateCustomer() {
         Customer customer = customerRepository.findById(1L) // Optional<Customer>
                 .orElseThrow(() -> new RuntimeException("Customer Not Found"));
-        //수정하려면 Entity의 setter 메소드 호출한다.
-        customer.setCustomerName("스프링부트");
-        customerRepository.save(customer);
-        assertThat(customer.getCustomerName()).isEqualTo("스프링부트");
+        //수정하려면 Entity의 setter 메소드 호출한다. dirty read
+        // update customers set customer_id=?,customer_name=?,where id =? (@DynamicUpdate 적용 전)
+        // update customers set customer_name=? where id=? (@DynamicUpdate 적용 후)
+        customer.setCustomerName("홍길동");
+//        customerRepository.save(customer); @Transaction을 걸면 따로 save 안해줘도 되는데 더티 리드임
+        assertThat(customer.getCustomerName()).isEqualTo("홍길동");
     }
 
     @Test
