@@ -25,7 +25,7 @@ class CustomerRepositoryTest {
     @Test
     @Rollback(value = false)
     void testDeleteCustomer() {
-        Customer customer = customerRepository.findById(1L)
+        Customer customer = customerRepository.findById(3L)
                 .orElseThrow(() -> new RuntimeException("Customer Not Found"));
         customerRepository.delete(customer);
     }
@@ -33,7 +33,7 @@ class CustomerRepositoryTest {
     @Test
     @Rollback(value = false)
     void testUpdateCustomer() {
-        Customer customer = customerRepository.findById(1L) // Optional<Customer>
+        Customer customer = customerRepository.findById(3L) // Optional<Customer>
                 .orElseThrow(() -> new RuntimeException("Customer Not Found"));
         //수정하려면 Entity의 setter 메소드 호출한다. dirty read
         // update customers set customer_id=?,customer_name=?,where id =? (@DynamicUpdate 적용 전)
@@ -44,21 +44,23 @@ class CustomerRepositoryTest {
     }
 
     @Test
+
     void testByNotFoundException() {
         // <X extends Throwable> T orElseThrow(Supplier<? extends X> exceptionSupplier)
         // Supplier의 추상메서드 T get()
-        Customer customer = customerRepository.findByCustomerId("A004")
+        Customer customer = customerRepository.findByCustomerId("A002")
                 .orElseThrow(() -> new RuntimeException("Customer Not Found"));
 //        assertThat(customer.getCustomerName()).isEqualTo("A001");
     }
 
     @Test
+
     void testFindBy() {
-        Optional<Customer> optionalCustomer = customerRepository.findById(1L);
+        Optional<Customer> optionalCustomer = customerRepository.findById(3L);
 //        assertThat(optionalCustomer).isNotEmpty();
         if(optionalCustomer.isPresent()){
             Customer existCustomer = optionalCustomer.get();
-            assertThat(existCustomer.getId()).isEqualTo(1L);
+            assertThat(existCustomer.getId()).isEqualTo(3L);
         }
         // Optional 의 T orElseGet(Supplier<? extends T> supplier)
         // Supplier의 추상메서드 T get()
